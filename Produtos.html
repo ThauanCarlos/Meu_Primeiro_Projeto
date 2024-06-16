@@ -3,80 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo De Produtos</title>
-    <style>
-        body {
-            background-color: #ADD8E6;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            text-align: center;
-            color: red;
-            text-shadow: 2px 2px 4px white;
-        }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        li {
-            width: 20%;
-            margin-bottom: 20px;
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: auto;
-        }
-        ul{
-            background-color: white;
-        }
-    </style>
+    <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Catálogo De Produtos</h1>
-    <hr>
-    <ul>
-        <li>
-            <h3>Câmera Ip 360 Externa à prova D'água</h3>
-            <img src="cameras/camera_360.jpeg" height="100">
-        </li>
-        <li>
-            <h3>Câmera Ip olho de peixe</h3>
-            <img src="cameras/camera_olho_de_peixe.jpeg" height="100">
-        </li>
-        <li>
-            <h3>Câmera Ip segurança lâmpada 360º</h3>
-            <img src="cameras/camera_lampada.jpeg" height="100">
-        </li>
-        <li>
-            <h3>Interfone com câmera</h3>
-            <img src="cameras/Interfone_com_camera.jpeg" height="100">
-        </li>
-        <li>
-            <h3>Câmera olho vivo à prova d'água 360º</h3>
-            <img src="cameras/camera-olho_vivo.jpeg" height="100">
-        </li>
-        <li>
-            <h3>Câmera com Tela</h3>
-            <img src="cameras/Camera_para_tela.jpeg" height="100">
-        <li>
-            <h3>Concertina</h3>
-            <img src="cameras/Concertina.jpg" height="100">
-        <li>
-            <h3>kit Alarme Residencial</h3>
-            <img src="cameras/Kit_Alarme_Residencial.jpeg" height="100">
-        </li>
-    </ul>
+    <header>
+        <div class="logo">
+            <img src="cameras/logo.png" alt="Logo" class="logo-image">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><button>Home</button></a></li>
+                <li><a href="#produtos"><button>Produtos</button></a></li>
+                <li><a href="https://wa.me/31985294448/?text=Quero%20fazer%20orçamento" target="_blank"><button>Entrar em Contato</button></a></li>
+                <li><a href="https://www.instagram.com/thallesmonitoramento2023/" target="_blank"><button>Instagram</button></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="produtos">
+            <h2>Catálogo de Produtos</h2>
+            <ul class="product-list">
+                <!-- Os produtos serão gerados automaticamente pelo script JavaScript -->
+            </ul>
+        </section>
+    </main>
+    <button id="topBtn" title="Voltar ao topo">↑</button>
+    <footer>
+        <p>&copy; 2024 Thalles Monitoramento. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

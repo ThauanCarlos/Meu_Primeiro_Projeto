@@ -1,8 +1,339 @@
-h1{
-    text-align: center;
-    background-color: antiquewhite;
+/* Estilos Gerais */
+@font-face {
+    font-family: 'Garland Script';
+    src: url('fonts/GarlandScript-Regular.ttf') format('truetype');
 }
 
-h2{
-    color: cadetblue;
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FCFBF5;
+}
+
+header {
+    background-color: #6CAEED;
+    color: #FCFBF5;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo-image {
+    max-width: 200px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a button,
+nav ul li button {
+    background: #DDEEFA;
+    border: 2px solid #6CAEED;
+    color: #6CAEED;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+nav ul li a button:hover,
+nav ul li button:hover {
+    background: #6CAEED;
+    color: #FCFBF5;
+    border-color: #FCFBF5;
+}
+
+main {
+    padding: 120px 20px 20px; /* Ajuste o valor de acordo com a altura do cabeçalho */
+}
+
+section {
+    padding: 20px;
+    background-color: #FCFBF5;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    scroll-margin-top: 120px; /* Ajuste o valor de acordo com a altura do cabeçalho */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contact-buttons a button {
+    background: #6CAEED;
+    color: #FCFBF5;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    font-size: 1em;
+}
+
+.contact-buttons a button:hover {
+    background: #FCFBF5;
+    color: #6CAEED;
+    border: 2px solid #6CAEED;
+}
+
+footer {
+    background-color: #6CAEED;
+    color: #FCFBF5;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos do Catálogo de Produtos */
+.product-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-list li {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #DDEEFA;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-list img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-list h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Estilos do Botão de Voltar ao Topo */
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    font-size: 18px;
+    background-color: #6CAEED;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#topBtn:hover {
+    opacity: 0.8;
+}
+
+/* Estilos do Modal da Calculadora */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #FCFBF5;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.taxa-obrigatoria {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+#calcDisplay {
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #DDEEFA;
+}
+
+.calc-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.calc-buttons button {
+    width: calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    background-color: #89CFF0;
+    color: #FCFBF5;
+}
+
+.calc-buttons button img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-bottom: 5px;
+}
+
+.calc-buttons button span {
+    margin-bottom: 5px;
+}
+
+.calc-buttons button input {
+    width: 50px;
+    text-align: center;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.calc-buttons button:hover {
+    background: #6CAEED;
+}
+
+.finalize-btn {
+    background-color: #89CFF0;
+    color: #FCFBF5;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.finalize-btn:hover {
+    background-color: #6CAEED;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .calc-buttons button {
+        width: calc(50% - 10px);
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header, footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .calc-buttons button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #calcDisplay {
+        font-size: 1.2em;
+        padding: 8px;
+    }
+
+    .finalize-btn {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
 }

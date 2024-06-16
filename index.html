@@ -1,52 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa de Câmeras de Segurança</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">
-            <span class="thalles">Thalles</span>
-            <span class="monitoramento">Monitoramento</span>
+            <img src="cameras/logo.png" alt="Logo" class="logo-image">
         </div>
         <nav>
             <ul>
-                <li><a href="#sobre"><button>Sobre Nós</button></a></li>
-                <li><button onclick="window.open('Produtos.html', '_blank')">Produtos</button></li>
-                <li><a href="#servicos"><button>Serviços</button></a></li>
-                <li><a href="https://wa.me/(31)985294448/?text=Quero%20fazer%20or%C3%A7amento" target="_blank"><button>Fazer Orçamento</button></a></li>
+                <li><a href="Produtos.html"><button>Produtos</button></a></li>
+                <li><button id="openCalcBtn">Faça seu orçamento</button></li>
+                <li><a href="https://wa.me/31985294448/?text=Quero%20fazer%20orçamento" target="_blank"><button>Entrar em Contato</button></a></li>
             </ul>
         </nav>
     </header>
-    <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>A Empresa de Sistemas de Segurança, oferecendo soluções de vigilância avançadas para residências e empresas.</p>
-    </section>
-    <section id="produtos">
-        <h2>Produtos</h2>
-        <p>Aqui estão alguns dos produtos que oferecemos:</p>
-        <ul>
-            <li>Câmeras de Segurança</li>
-            <li>DVRs</li>
-            <li>Sistemas de Monitoramento</li>
-        </ul>
-    </section>
-    <section id="servicos">
-        <h2>Serviços</h2>
-        <p>Nossos serviços incluem instalação, manutenção e suporte técnico para todos os produtos que oferecemos.</p>
-    </section>
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Entre em contato conosco para mais informações sobre nossos produtos e serviços.</p>
-        <p>Email: aaaaaaaa@aaaaaaaaaa.com.br</p>
-        <p>Telefone: (31)98529-4448</p>
-    </section>
+    <main>
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <p>Aqui estão alguns dos produtos que oferecemos:</p>
+            <ul class="product-list">
+                <!-- Os produtos serão gerados automaticamente pelo script JavaScript -->
+            </ul>
+        </section>
+        <section id="orcamento">
+            <h2>Faça seu orçamento</h2>
+            <p>Use nossa calculadora para fazer seu orçamento de serviços e produtos.</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para mais informações sobre nossos produtos e serviços:</p>
+            <div class="contact-buttons">
+                <a href="mailto:fernando.thalles@gmail.com"><button>Email</button></a>
+                <a href="https://wa.me/31985294448" target="_blank"><button>WhatsApp</button></a>
+                <a href="https://www.instagram.com/thallesmonitoramento2023/" target="_blank"><button>Instagram</button></a>
+            </div>
+        </section>
+    </main>
+    <button id="topBtn" title="Voltar ao topo">↑</button>
     <footer>
         <p>&copy; 2024 Thalles Monitoramento. Todos os direitos reservados.</p>
     </footer>
+    <div id="calcModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cálculo de Serviço</h2>
+            <p class="taxa-obrigatoria">*taxa obrigatória</p>
+            <input type="text" id="calcDisplay" value="R$ 100,00" readonly>
+            <div class="calc-buttons">
+                <!-- Os produtos serão gerados automaticamente pelo script JavaScript -->
+            </div>
+            <button id="finalizeBtn" class="finalize-btn">Finalizar Orçamento</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
