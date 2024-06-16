@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Garland Script';
+    src: url('fonts/GarlandScript-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg');
+    background-size: cover; /* Para cobrir toda a tela */
+    background-position: center; /* Para centralizar a imagem */
+    background-repeat: no-repeat; /* Para evitar a repetição da imagem */
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.7); /* Fundo semi-transparente */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.thalles {
+    font-family: 'Garland Script', sans-serif; /* Aplicando a fonte Garland Script */
+    font-size: 3em;
+    color: #df2736;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.monitoramento {
+    display: block;
+    font-size: 1.5em;
+    color: #1241db;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    margin-top: -10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para seções */
+    margin: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.7); /* Fundo semi-transparente */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0
+}
